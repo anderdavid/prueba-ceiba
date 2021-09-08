@@ -12,16 +12,14 @@ export class PrestamoService {
        
          await this.repositorioPrestamo.save(this.repositorioPrestamo.create(
              {
-                isbn:"DASD154212",
-                identificaciónUsuario:"154515485",
-                tipoUsuario:1,
-                fechaMaximaDevolucion: "15/02/2021"
+                 ...body,
+                 fechaMaximaDevolucion: "15/02/2021"
              }
          ))
          return "crear prestamo "+JSON.stringify(body);
     }
 
     getPrestamo(id): Promise<Prestamo[]>{
-        return this.repositorioPrestamo.find();
+        return this.repositorioPrestamo.find(); 
     }
 }
