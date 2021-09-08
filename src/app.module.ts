@@ -4,6 +4,7 @@ import { UsuarioController } from './usuario.controller';
 import { Usuario } from './user.entity';
 import { PrestamoController } from './controllers/prestamo/prestamo.controller';
 import { PrestamoService } from './services/prestamo/prestamo.service';
+import { Prestamo } from './models/prestamo.entity';
 
 /**
  * NestJs es un framework modular, acá se puso todo el manejo del objeto Usuario desde el App modulo, que es el que da inicio a todo el proyecto
@@ -15,9 +16,9 @@ import { PrestamoService } from './services/prestamo/prestamo.service';
       {
         type: "sqlite",
         database: ":memory:", //Indica que es una base de datos en memoria y se reinicia en cada ejecución
-        entities: [Usuario], // Se definen las entidades va administrar (y las cuales creara como tablas al momento de inicar la app)
+        entities: [Usuario,Prestamo], // Se definen las entidades va administrar (y las cuales creara como tablas al momento de inicar la app)
         synchronize: true
-      }), TypeOrmModule.forFeature([Usuario]) //Administración de entidades debería hacerce solo en cada modulo encargado de la entidad
+      }), TypeOrmModule.forFeature([Usuario,Prestamo]) //Administración de entidades debería hacerce solo en cada modulo encargado de la entidad
   ],
   controllers: [UsuarioController, PrestamoController],
   providers: [PrestamoService],
