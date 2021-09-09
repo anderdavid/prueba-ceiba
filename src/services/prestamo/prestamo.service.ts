@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable,HttpException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Prestamo } from '../../models/prestamo.entity';
@@ -15,9 +15,8 @@ export class PrestamoService {
         const USUARIO_INVITADO:number=3;
        
         if(body.tipoUsuario === USUARIO_INVITADO && ! await this.validaciones.validarPrestamoInvitado(body.identificaciónUsuario)){
-            return{
-                mensaje :`El usuario con identificación ${body.identificaciónUsuario} ya tiene un libro prestado por lo cual no se le puede realizar otro préstamo`
-            }
+
+            throw new HttpException(`El usuario con identificación ${body.identificaciónUsuario} ya tiene un libro prestado por lo cual no se le puede realizar otro préstamo`,404);
         }else{
             let currently:any=await this.repositorioPrestamo.save(this.repositorioPrestamo.create(
                 {
