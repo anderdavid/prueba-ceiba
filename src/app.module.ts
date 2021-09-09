@@ -5,6 +5,7 @@ import { Usuario } from './user.entity';
 import { PrestamoController } from './controllers/prestamo/prestamo.controller';
 import { PrestamoService } from './services/prestamo/prestamo.service';
 import { Prestamo } from './models/prestamo.entity';
+import {Validaciones} from './untils/validaciones'
 
 /**
  * NestJs es un framework modular, acá se puso todo el manejo del objeto Usuario desde el App modulo, que es el que da inicio a todo el proyecto
@@ -21,6 +22,6 @@ import { Prestamo } from './models/prestamo.entity';
       }), TypeOrmModule.forFeature([Usuario,Prestamo]) //Administración de entidades debería hacerce solo en cada modulo encargado de la entidad
   ],
   controllers: [UsuarioController, PrestamoController],
-  providers: [PrestamoService],
+  providers: [PrestamoService,Validaciones],
 })
 export class AppModule { }
