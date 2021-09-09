@@ -17,7 +17,10 @@ export class PrestamoService {
         if(body.tipoUsuario === USUARIO_INVITADO && ! await this.validaciones.validarPrestamoInvitado(body.identificaciónUsuario)){
 
             throw new HttpException(`El usuario con identificación ${body.identificaciónUsuario} ya tiene un libro prestado por lo cual no se le puede realizar otro préstamo`,404);
-        }else{
+        }else if(!this.validaciones.validarTipoDeUsuario(body.tipoUsuario)){
+            throw new HttpException("Tipo de usuario no permitido en la biblioteca",404);
+        }
+        else{
             let currently:any=await this.repositorioPrestamo.save(this.repositorioPrestamo.create(
                 {
                     ...body,
