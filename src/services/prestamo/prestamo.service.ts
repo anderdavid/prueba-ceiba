@@ -37,7 +37,7 @@ export class PrestamoService {
     
     }
 
-    getPrestamo(id): Promise<Prestamo[]>{
-        return this.repositorioPrestamo.find(); 
+    getPrestamo(id): Promise<Prestamo>{
+        return this.repositorioPrestamo.findOne({id:id});
     }
 }
