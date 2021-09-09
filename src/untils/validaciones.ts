@@ -31,4 +31,20 @@ export class Validaciones{
             return false;
         }
     }
+
+    validarParametros(body){
+       
+        if(body.isbn===undefined){
+            return true;
+        }else if(body.identificaciónUsuario===undefined){
+            return true;
+        }else if(body.tipoUsuario===undefined){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+
+
 }

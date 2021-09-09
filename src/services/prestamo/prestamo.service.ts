@@ -13,9 +13,10 @@ export class PrestamoService {
     async createPrestamo(body:any){
 
         const USUARIO_INVITADO:number=3;
-       
-        if(body.tipoUsuario === USUARIO_INVITADO && ! await this.validaciones.validarPrestamoInvitado(body.identificaciónUsuario)){
-
+        if(this.validaciones.validarParametros(body)){
+            throw new HttpException("Parametros invalidos",404);
+        }
+        else if(body.tipoUsuario === USUARIO_INVITADO && ! await this.validaciones.validarPrestamoInvitado(body.identificaciónUsuario)){
             throw new HttpException(`El usuario con identificación ${body.identificaciónUsuario} ya tiene un libro prestado por lo cual no se le puede realizar otro préstamo`,404);
         }else if(!this.validaciones.validarTipoDeUsuario(body.tipoUsuario)){
             throw new HttpException("Tipo de usuario no permitido en la biblioteca",404);
