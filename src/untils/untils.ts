@@ -34,5 +34,5 @@ export const calcularFechaMaxima =(tipoUsuario)=>{
     }
     
     
-    return today.format('DD/MM/YYYY')
+    return today.format('DD/M/YYYY')
 }

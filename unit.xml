@@ -1,37 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.0640" tests="6" failures="6">
-  <testsuite name="Root Suite" timestamp="2021-09-07T18:27:52" tests="0" time="0.0000" failures="0">
+<testsuites name="Mocha Tests" time="0.1620" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-09-09T18:46:31" tests="0" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="Prestamos biblioteca test" timestamp="2021-09-07T18:27:52" tests="6" file="/projects/challenge/test/prestamo.spec.ts" time="0.0640" failures="6">
-    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Afiliado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.0390" classname="prestamo Libro Usuario Afiliado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
-      <failure message="expected { Object (statusCode, message, ...) } to have property &apos;id&apos;" type="AssertionError"><![CDATA[AssertionError: expected { Object (statusCode, message, ...) } to have property 'id'
-    at Context.<anonymous> (test/prestamo.spec.ts:44:44)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+  <testsuite name="Prestamos biblioteca test" timestamp="2021-09-09T18:46:31" tests="6" file="/home/anderdavida/ceiba/fe48464d-d6bd-4687-ab15-ad4fcbc811b7/test/prestamo.spec.ts" time="0.1620" failures="0">
+    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Afiliado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.0980" classname="prestamo Libro Usuario Afiliado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
     </testcase>
-    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Empleado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.0070" classname="prestamo Libro Usuario Empleado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
-      <failure message="expected { Object (statusCode, message, ...) } to have property &apos;id&apos;" type="AssertionError"><![CDATA[AssertionError: expected { Object (statusCode, message, ...) } to have property 'id'
-    at Context.<anonymous> (test/prestamo.spec.ts:65:44)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Empleado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.0130" classname="prestamo Libro Usuario Empleado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
     </testcase>
-    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Invitado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.0070" classname="prestamo Libro Usuario Invitado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
-      <failure message="expected { Object (statusCode, message, ...) } to have property &apos;id&apos;" type="AssertionError"><![CDATA[AssertionError: expected { Object (statusCode, message, ...) } to have property 'id'
-    at Context.<anonymous> (test/prestamo.spec.ts:85:44)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Invitado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.0150" classname="prestamo Libro Usuario Invitado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
     </testcase>
-    <testcase name="Prestamos biblioteca test usuario Invitado Tratando De Prestar Un Segundo Libro Deberia Retornar Excepcion" time="0.0040" classname="usuario Invitado Tratando De Prestar Un Segundo Libro Deberia Retornar Excepcion">
-      <failure message="expected 404 to equal 201" type="AssertionError"><![CDATA[AssertionError: expected 404 to equal 201
-    at Context.<anonymous> (test/prestamo.spec.ts:102:56)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    <testcase name="Prestamos biblioteca test usuario Invitado Tratando De Prestar Un Segundo Libro Deberia Retornar Excepcion" time="0.0180" classname="usuario Invitado Tratando De Prestar Un Segundo Libro Deberia Retornar Excepcion">
     </testcase>
-    <testcase name="Prestamos biblioteca test usuario Diferente A Invitado Tratando De Prestar Un Segundo Libro Deberia Prestarlo Correctamente" time="0.0040" classname="usuario Diferente A Invitado Tratando De Prestar Un Segundo Libro Deberia Prestarlo Correctamente">
-      <failure message="expected 404 to equal 201" type="AssertionError"><![CDATA[AssertionError: expected 404 to equal 201
-    at Context.<anonymous> (test/prestamo.spec.ts:125:56)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    <testcase name="Prestamos biblioteca test usuario Diferente A Invitado Tratando De Prestar Un Segundo Libro Deberia Prestarlo Correctamente" time="0.0140" classname="usuario Diferente A Invitado Tratando De Prestar Un Segundo Libro Deberia Prestarlo Correctamente">
     </testcase>
-    <testcase name="Prestamos biblioteca test prestamo Con Tipo De Usuario No Permitido Deberia Retornar Excepcion" time="0.0030" classname="prestamo Con Tipo De Usuario No Permitido Deberia Retornar Excepcion">
-      <failure message="expected 404 to equal 400" type="AssertionError"><![CDATA[AssertionError: expected 404 to equal 400
-    at Context.<anonymous> (test/prestamo.spec.ts:152:50)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    <testcase name="Prestamos biblioteca test prestamo Con Tipo De Usuario No Permitido Deberia Retornar Excepcion" time="0.0040" classname="prestamo Con Tipo De Usuario No Permitido Deberia Retornar Excepcion">
     </testcase>
   </testsuite>
 </testsuites>

@@ -9,7 +9,7 @@ export class Prestamo {
   isbn: string;
 
   @Column()
-  identificaciónUsuario: string;
+  identificacionUsuario: string;
 
   @Column()
   tipoUsuario: number; 

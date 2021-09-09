@@ -8,11 +8,11 @@ import { Usuario } from './user.entity';
  * En una arquitectura con una buena separación de capas, no deberíamos inyectar el repositorio en el controlador
  * Este ejemplo no tiene ninguna arquitectura propuesta, usted debería plantear una arquitectura y realizar la separación de capas correcta
  * Acá se hizo solo con el objetivo de que usted vea como usar el objeto repositorio y lo pueda usar en otro objeto
- * 
+ * d
  */
 @Controller("usuario")
 export class UsuarioController {
-  constructor( @InjectRepository(Usuario)
+  constructor( @InjectRepository(Usuario) 
   private repositorioUsuario: Repository<Usuario>) {}
 
   @Get()

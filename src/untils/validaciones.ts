@@ -15,7 +15,8 @@ export class Validaciones{
     private repositorioPrestamo: Repository<Prestamo>){}
 
     async validarPrestamoInvitado(mIdentificaciónUsuario):Promise<boolean>{
-        const prestamo = await this.repositorioPrestamo.findOne({identificaciónUsuario:mIdentificaciónUsuario});
+        const prestamo = await this.repositorioPrestamo.findOne({identificacionUsuario:mIdentificaciónUsuario});
+        console.log(mIdentificaciónUsuario);
         return (prestamo===undefined)?true:false;
     }
 
@@ -32,19 +33,19 @@ export class Validaciones{
         }
     }
 
-    validarParametros(body){
+    // validarParametros(body){
        
-        if(body.isbn===undefined){
-            return true;
-        }else if(body.identificaciónUsuario===undefined){
-            return true;
-        }else if(body.tipoUsuario===undefined){
-            return true;
-        }else{
-            return false;
-        }
+    //     if(body.isbn===undefined){
+    //         return true;
+    //     }else if(body.identificacionUsuario===undefined){
+    //         return true;
+    //     }else if(body.tipoUsuario===undefined){
+    //         return true;
+    //     }else{
+    //         return false;
+    //     }
         
-    }
+    // }
 
 
 }

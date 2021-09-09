@@ -1,4 +1,4 @@
-import { Injectable,HttpException } from '@nestjs/common';
+import { Injectable,HttpException,HttpStatus } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Prestamo } from '../../models/prestamo.entity';
@@ -13,13 +13,18 @@ export class PrestamoService {
     async createPrestamo(body:any){
 
         const USUARIO_INVITADO:number=3;
-        if(this.validaciones.validarParametros(body)){
-            throw new HttpException("Parametros invalidos",404);
-        }
-        else if(body.tipoUsuario === USUARIO_INVITADO && ! await this.validaciones.validarPrestamoInvitado(body.identificaciónUsuario)){
-            throw new HttpException(`El usuario con identificación ${body.identificaciónUsuario} ya tiene un libro prestado por lo cual no se le puede realizar otro préstamo`,404);
+       
+        if(body.tipoUsuario === USUARIO_INVITADO && ! await this.validaciones.validarPrestamoInvitado(body.identificacionUsuario)){
+            throw new HttpException({
+                status: 400,
+                mensaje: `El usuario con identificación ${body.identificacionUsuario} ya tiene un libro prestado por lo cual no se le puede realizar otro préstamo`,
+              }, 400);
         }else if(!this.validaciones.validarTipoDeUsuario(body.tipoUsuario)){
-            throw new HttpException("Tipo de usuario no permitido en la biblioteca",404);
+            
+            throw new HttpException({
+                status: 400,
+                mensaje: `Tipo de usuario no permitido en la biblioteca`,
+              }, 400);
         }
         else{
             let currently:any=await this.repositorioPrestamo.save(this.repositorioPrestamo.create(
