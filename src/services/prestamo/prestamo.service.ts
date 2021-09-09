@@ -12,9 +12,7 @@ export class PrestamoService {
 
     async createPrestamo(body:any){
 
-    const USUARIO_AFILIADO:number=1;
-    const USUARIO_EMPLEADO:number=2;
-    const USUARIO_INVITADO:number=3;
+        const USUARIO_INVITADO:number=3;
        
         if(body.tipoUsuario === USUARIO_INVITADO && ! await this.validaciones.validarPrestamoInvitado(body.identificaciónUsuario)){
             return{
@@ -24,7 +22,7 @@ export class PrestamoService {
             let currently:any=await this.repositorioPrestamo.save(this.repositorioPrestamo.create(
                 {
                     ...body,
-                    fechaMaximaDevolucion: "15/02/2021"
+                    fechaMaximaDevolucion: calcularFechaMaxima(body.tipoUsuario)
                 }
             ))
             const {id,fechaMaximaDevolucion}=currently;
@@ -32,12 +30,8 @@ export class PrestamoService {
                 id:id,
                 fechaMaximaDevolucion:fechaMaximaDevolucion
             }
-            
-               
         }
     
-    
-
     }
 
     getPrestamo(id): Promise<Prestamo[]>{
