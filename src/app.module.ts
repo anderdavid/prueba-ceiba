@@ -1,7 +1,5 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UsuarioController } from './usuario.controller';
-import { Usuario } from './user.entity';
 import { PrestamoController } from './controllers/prestamo/prestamo.controller';
 import { PrestamoService } from './services/prestamo/prestamo.service';
 import { Prestamo } from './models/prestamo.entity';
@@ -17,11 +15,11 @@ import {Validaciones} from './untils/validaciones'
       {
         type: "sqlite",
         database: ":memory:", //Indica que es una base de datos en memoria y se reinicia en cada ejecución
-        entities: [Usuario,Prestamo], // Se definen las entidades va administrar (y las cuales creara como tablas al momento de inicar la app)
+        entities: [Prestamo], // Se definen las entidades va administrar (y las cuales creara como tablas al momento de inicar la app)
         synchronize: true
-      }), TypeOrmModule.forFeature([Usuario,Prestamo]) //Administración de entidades debería hacerce solo en cada modulo encargado de la entidad
+      }), TypeOrmModule.forFeature([Prestamo]) //Administración de entidades debería hacerce solo en cada modulo encargado de la entidad
   ],
-  controllers: [UsuarioController, PrestamoController],
+  controllers: [PrestamoController],
   providers: [PrestamoService,Validaciones],
 })
 export class AppModule { }
