@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.1180" tests="6" failures="0">
-  <testsuite name="Root Suite" timestamp="2021-09-09T20:21:44" tests="0" time="0.0000" failures="0">
+<testsuites name="Mocha Tests" time="0.4550" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-09-15T15:45:35" tests="0" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="Prestamos biblioteca test" timestamp="2021-09-09T20:21:44" tests="6" file="/projects/challenge/test/prestamo.spec.ts" time="0.1180" failures="0">
-    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Afiliado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.0730" classname="prestamo Libro Usuario Afiliado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
+  <testsuite name="Prestamos biblioteca test" timestamp="2021-09-15T15:45:35" tests="6" file="/home/anderdavida/ceiba/fe48464d-d6bd-4687-ab15-ad4fcbc811b7/test/prestamo.spec.ts" time="0.4550" failures="0">
+    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Afiliado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.3810" classname="prestamo Libro Usuario Afiliado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
     </testcase>
-    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Empleado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.0100" classname="prestamo Libro Usuario Empleado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
+    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Empleado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.0130" classname="prestamo Libro Usuario Empleado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
     </testcase>
-    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Invitado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.0100" classname="prestamo Libro Usuario Invitado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
+    <testcase name="Prestamos biblioteca test prestamo Libro Usuario Invitado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion" time="0.0190" classname="prestamo Libro Usuario Invitado Deberia Almacenar Correctamente Y Calcular Fecha De Devolucion">
     </testcase>
-    <testcase name="Prestamos biblioteca test usuario Invitado Tratando De Prestar Un Segundo Libro Deberia Retornar Excepcion" time="0.0100" classname="usuario Invitado Tratando De Prestar Un Segundo Libro Deberia Retornar Excepcion">
+    <testcase name="Prestamos biblioteca test usuario Invitado Tratando De Prestar Un Segundo Libro Deberia Retornar Excepcion" time="0.0140" classname="usuario Invitado Tratando De Prestar Un Segundo Libro Deberia Retornar Excepcion">
     </testcase>
-    <testcase name="Prestamos biblioteca test usuario Diferente A Invitado Tratando De Prestar Un Segundo Libro Deberia Prestarlo Correctamente" time="0.0130" classname="usuario Diferente A Invitado Tratando De Prestar Un Segundo Libro Deberia Prestarlo Correctamente">
+    <testcase name="Prestamos biblioteca test usuario Diferente A Invitado Tratando De Prestar Un Segundo Libro Deberia Prestarlo Correctamente" time="0.0230" classname="usuario Diferente A Invitado Tratando De Prestar Un Segundo Libro Deberia Prestarlo Correctamente">
     </testcase>
-    <testcase name="Prestamos biblioteca test prestamo Con Tipo De Usuario No Permitido Deberia Retornar Excepcion" time="0.0020" classname="prestamo Con Tipo De Usuario No Permitido Deberia Retornar Excepcion">
+    <testcase name="Prestamos biblioteca test prestamo Con Tipo De Usuario No Permitido Deberia Retornar Excepcion" time="0.0050" classname="prestamo Con Tipo De Usuario No Permitido Deberia Retornar Excepcion">
     </testcase>
   </testsuite>
 </testsuites>
